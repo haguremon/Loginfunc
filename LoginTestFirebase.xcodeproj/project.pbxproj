@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3937A25D4B95922D00B7F4E8 /* Pods_LoginTestFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D14767F6AC3DA77D1EC5B4C9 /* Pods_LoginTestFirebase.framework */; };
+		CF8E2F91263279B60070E50B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF8E2F90263279B60070E50B /* GoogleService-Info.plist */; };
 		CFAE5AE2262DAEAE00699832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE5AE1262DAEAE00699832 /* AppDelegate.swift */; };
 		CFAE5AE4262DAEAE00699832 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE5AE3262DAEAE00699832 /* SceneDelegate.swift */; };
 		CFAE5AE6262DAEAE00699832 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE5AE5262DAEAE00699832 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		493BC2E4F409D185D104EC66 /* Pods-LoginTestFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTestFirebase.release.xcconfig"; path = "Target Support Files/Pods-LoginTestFirebase/Pods-LoginTestFirebase.release.xcconfig"; sourceTree = "<group>"; };
+		CF8E2F90263279B60070E50B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "firebaselogin/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CFAE5ADE262DAEAE00699832 /* LoginTestFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTestFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAE5AE1262DAEAE00699832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFAE5AE3262DAEAE00699832 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				FC6079B3C835DA1AD829B109 /* Pods-LoginTestFirebase.debug.xcconfig */,
 				493BC2E4F409D185D104EC66 /* Pods-LoginTestFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				CFAE5AEA262DAEB200699832 /* Assets.xcassets */,
 				CFAE5AEC262DAEB200699832 /* LaunchScreen.storyboard */,
 				CFAE5AEF262DAEB200699832 /* Info.plist */,
+				CF8E2F90263279B60070E50B /* GoogleService-Info.plist */,
 			);
 			path = LoginTestFirebase;
 			sourceTree = "<group>";
@@ -155,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAE5AEE262DAEB200699832 /* LaunchScreen.storyboard in Resources */,
+				CF8E2F91263279B60070E50B /* GoogleService-Info.plist in Resources */,
 				CFAE5AEB262DAEB200699832 /* Assets.xcassets in Resources */,
 				CFAE5AE9262DAEAE00699832 /* Main.storyboard in Resources */,
 			);
