@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -17,7 +18,29 @@ class ViewController: UIViewController {
     @IBOutlet private var userNameTextField: UITextField!
     
     @IBOutlet private var registerButton: UIButton!
-    
+    @IBAction func tappedRegisterButton(_ sender: Any) {
+        handleAuthToFirebase()
+    }
+    private func handleAuthToFirebase(){
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        Auth.auth().createUser(withEmail: email, password: password) { [self] (result, error) in
+            if let error = error {
+                print("認証情報の保存に失敗しました。\(error)")
+                return
+            }
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            guard let name = userNameTextField.text else { return }
+            let documentData = ["email": email, "name": name, "createdAt": Timestamp()] as [String : Any]
+            Firestore.firestore().collection("users").document(uid).setData(documentData) { (error) in
+                if let error = error {
+                    print("認証情報の保存に失敗しました\(error)")
+                    return
+                }
+                print("認証情報の保存に成功しました。")
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         registerButton.isEnabled = false
