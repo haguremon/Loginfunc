@@ -8,6 +8,19 @@
 import UIKit
 import Firebase
 
+struct User {
+    
+    let name: String
+    let createdAt: Timestamp
+    let email: String
+    
+    init(dic: [String: Any]) {
+        self.name = dic["name"] as! String
+        self.createdAt = dic["createdAt"] as! Timestamp
+        self.email = dic["email"] as! String
+    }
+}
+
 class ViewController: UIViewController {
     
     
@@ -24,22 +37,37 @@ class ViewController: UIViewController {
     private func handleAuthToFirebase(){
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { [self] (result, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 print("認証情報の保存に失敗しました。\(error)")
                 return
             }
-            guard let uid = Auth.auth().currentUser?.uid else { return }
-            guard let name = userNameTextField.text else { return }
-            let documentData = ["email": email, "name": name, "createdAt": Timestamp()] as [String : Any]
-            Firestore.firestore().collection("users").document(uid).setData(documentData) { (error) in
-                if let error = error {
-                    print("認証情報の保存に失敗しました\(error)")
-                    return
-                }
-                print("認証情報の保存に成功しました。")
-            }
+            self.addUserInfoToFirestore(email: email)
         }
+    }
+    private func addUserInfoToFirestore(email: String) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let name = self.userNameTextField.text else { return }
+        let documentData = ["email": email, "name": name, "createdAt": Timestamp()] as [String : Any]
+        let usersRef = Firestore.firestore().collection("users").document(uid)
+        usersRef.setData(documentData) { (error) in
+            if let error = error {
+                print("認証情報の保存に失敗しました\(error)")
+                return
+            }
+            print("認証情報の保存に成功しました。")
+            usersRef.getDocument { (snapshot, error) in
+                if let error = error {
+                    print("ユーザー情報の取得に失敗しました。\(error)")
+                return
+                }
+                guard let date = snapshot?.data() else { return }
+                let user = User.init(dic: date)
+                print("ユーザー情報の取得に成功しました.\(user)")
+            }
+           
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
