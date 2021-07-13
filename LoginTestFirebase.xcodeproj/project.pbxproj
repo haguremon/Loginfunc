@@ -16,6 +16,7 @@
 		CFAE5AEB262DAEB200699832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAE5AEA262DAEB200699832 /* Assets.xcassets */; };
 		CFAE5AEE262DAEB200699832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAE5AEC262DAEB200699832 /* LaunchScreen.storyboard */; };
 		CFAE5AF7262F211D00699832 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE5AF6262F211D00699832 /* UIColor-Extension.swift */; };
+		CFF24D82263F002E00314864 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF24D81263F002E00314864 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CFAE5AED262DAEB200699832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFAE5AEF262DAEB200699832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFAE5AF6262F211D00699832 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		CFF24D81263F002E00314864 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D14767F6AC3DA77D1EC5B4C9 /* Pods_LoginTestFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTestFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6079B3C835DA1AD829B109 /* Pods-LoginTestFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTestFirebase.debug.xcconfig"; path = "Target Support Files/Pods-LoginTestFirebase/Pods-LoginTestFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				CFAE5AE3262DAEAE00699832 /* SceneDelegate.swift */,
 				CFAE5AF6262F211D00699832 /* UIColor-Extension.swift */,
 				CFAE5AE5262DAEAE00699832 /* ViewController.swift */,
+				CFF24D81263F002E00314864 /* HomeViewController.swift */,
 				CFAE5AE7262DAEAE00699832 /* Main.storyboard */,
 				CFAE5AEA262DAEB200699832 /* Assets.xcassets */,
 				CFAE5AEC262DAEB200699832 /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF24D82263F002E00314864 /* HomeViewController.swift in Sources */,
 				CFAE5AE6262DAEAE00699832 /* ViewController.swift in Sources */,
 				CFAE5AF7262F211D00699832 /* UIColor-Extension.swift in Sources */,
 				CFAE5AE2262DAEAE00699832 /* AppDelegate.swift in Sources */,

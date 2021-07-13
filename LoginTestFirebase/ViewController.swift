@@ -3,7 +3,7 @@
 //  LoginTestFirebase
 //
 //  Created by IwasakIYuta on 2021/04/19.
-//
+//Edit all in scope ⌃⌘E便利
 
 import UIKit
 import Firebase

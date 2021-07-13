@@ -141,6 +141,64 @@
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tcd-Ks-qhW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcV-b0-f0f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Gle-uK-Aqi" customClass="HomeViewController" customModule="LoginTestFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nyL-YS-gkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VW-DU-vRl">
+                                <rect key="frame" x="83" y="184" width="248" height="69.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作成日：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-b4-t8H">
+                                <rect key="frame" x="166" y="407.5" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-Xa-49G">
+                                <rect key="frame" x="107" y="511.5" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.7597516339" green="1" blue="0.70207826309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3mv-2j-afg"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ced-kd-TiG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="さんようこそ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-7D-n35">
+                                <rect key="frame" x="146" y="353.5" width="122.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="61L-7b-QXr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QeY-b4-t8H" firstAttribute="top" secondItem="gsE-7D-n35" secondAttribute="bottom" constant="30" id="4ji-7e-bZP"/>
+                            <constraint firstItem="cEi-Xa-49G" firstAttribute="centerX" secondItem="nyL-YS-gkZ" secondAttribute="centerX" id="9PD-22-W6X"/>
+                            <constraint firstItem="2VW-DU-vRl" firstAttribute="top" secondItem="61L-7b-QXr" secondAttribute="top" constant="140" id="9QI-3s-SJT"/>
+                            <constraint firstItem="gsE-7D-n35" firstAttribute="centerX" secondItem="nyL-YS-gkZ" secondAttribute="centerX" id="RPd-IN-8du"/>
+                            <constraint firstItem="QeY-b4-t8H" firstAttribute="top" secondItem="gsE-7D-n35" secondAttribute="bottom" constant="30" id="RtZ-fW-O19"/>
+                            <constraint firstItem="cEi-Xa-49G" firstAttribute="top" secondItem="QeY-b4-t8H" secondAttribute="bottom" constant="80" id="Sji-dE-bMZ"/>
+                            <constraint firstItem="gsE-7D-n35" firstAttribute="top" secondItem="2VW-DU-vRl" secondAttribute="bottom" constant="100" id="r2b-eS-skL"/>
+                            <constraint firstItem="QeY-b4-t8H" firstAttribute="centerX" secondItem="nyL-YS-gkZ" secondAttribute="centerX" id="ut4-VZ-Erj"/>
+                            <constraint firstItem="2VW-DU-vRl" firstAttribute="centerX" secondItem="nyL-YS-gkZ" secondAttribute="centerX" id="yti-la-fgt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="923.1884057971015" y="85.714285714285708"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
